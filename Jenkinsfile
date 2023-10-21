@@ -13,7 +13,7 @@ pipeline {
                     sh "${env.JAVA_HOME}/bin/javac HelloWorld.java"
                     
                     // Build the Docker image
-                    def customImage = docker.build("your-dockerhub-username/my-java-app:${env.BUILD_ID}")
+                    def customImage = docker.build("akashhulke/helloword:${env.BUILD_ID}")
                 }
             }
         }
