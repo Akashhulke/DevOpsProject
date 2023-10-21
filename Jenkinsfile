@@ -5,7 +5,7 @@ pipeline {
         stage('Build Docker Image') {
             steps {
                 script {
-                    def customImage = docker.build("akashhulke/HelloWorld:${env.BUILD_ID}")
+                    def customImage = docker.build("akashhulke/helloworld:${env.BUILD_ID}")
                 }
             }
         }
